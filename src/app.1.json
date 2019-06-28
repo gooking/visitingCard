@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/card/main",   
+    "pages/index/main",     
+    "pages/about/main",    
+    "pages/cardposter/main",    
+    "pages/authorization/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "box-shadow":"0 0 6px 0",
+    "list": [
+      {
+        "pagePath": "pages/card/main",
+        "iconPath": "/static/images/mp.png",
+        "selectedIconPath": "/static/images/mpa.png",
+        "text": "名片"
+      },
+      {
+        "pagePath": "pages/about/main",
+        "iconPath": "/static/images/pro.png",
+        "selectedIconPath": "/static/images/proa.png",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/about/main",
+        "iconPath": "/static/images/dt.png",
+        "selectedIconPath": "/static/images/dta.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/about/main",
+        "iconPath": "/static/images/about.png",
+        "selectedIconPath": "/static/images/abouta.png",
+        "text": "官宣"
+      }
+    ]
+  }
+}

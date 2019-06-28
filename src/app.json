@@ -1,0 +1,44 @@
+{
+  "pages": [    
+    "pages/card/main",
+    "pages/index/main",
+    "pages/cardposter/main",    
+    "pages/about/main",    
+    "pages/authorization/main",
+    "pages/news/main",
+    "pages/products/main",
+    "pages/news-detail/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "八艺科技",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/card/main",
+        "iconPath": "/static/images/mp.png",
+        "selectedIconPath": "/static/images/mpa.png",
+        "text": "名片"
+      },
+      {
+        "pagePath": "pages/products/main",
+        "iconPath": "/static/images/pro.png",
+        "selectedIconPath": "/static/images/proa.png",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/news/main",
+        "iconPath": "/static/images/dt.png",
+        "selectedIconPath": "/static/images/dta.png",
+        "text": "动态"
+      }
+    ]
+  }
+}
