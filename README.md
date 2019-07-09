@@ -43,7 +43,7 @@
 
 #### 使用说明
 
-1、关注微信服务号 "api工厂" ，回复 1708 获取您的专属后台
+1、 [api工厂](https://www.it120.cc/) 右上角注册免费开通您的专属后台
 > 
 2、project.config.json  和 package.swan.json 文件中的 appid 改为你自己小程序的 appid；
 > 
