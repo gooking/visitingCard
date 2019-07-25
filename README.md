@@ -27,7 +27,7 @@
 | 舔果果小铺 | 天使童装 | 面馆风格小程序 |
 | :------: | :------: | :------: |
 | <img src="https://cdn.it120.cc/apifactory/2018/04/01/b7b8f5a0fcfc72454ade8510ab929717.jpg" width="200px"> | <img src="https://cdn.it120.cc/apifactory/2019/06/28/a8304003-3218-4a47-95cf-84d82ebdc07b.jpg" width="200px"> | <img src="https://cdn.it120.cc/apifactory/2019/03/29/9e30cfe31eabcd218eb9c434f17e9295.jpg" width="200px"> | 
-| [开源地址](https://github.com/qindiandadudu/TianguoguoXiaopu) | [开源地址](https://github.com/EastWorld/wechat-app-mall) | [开源地址](https://gitee.com/javazj/noodle_shop_procedures) |
+| [开源地址](https://github.com/walcer/TianguoguoXiaopu) | [开源地址](https://github.com/EastWorld/wechat-app-mall) | [开源地址](https://gitee.com/javazj/noodle_shop_procedures) |
 
 ## 联系作者
 
@@ -54,6 +54,8 @@
 5、工厂后台，微信设置中，配置 appid 和 secret
 > 
 6、 [设置小程序合法服务器域名](https://www.it120.cc/info/faq/10469)
+> 
+7、[系统参数设置](https://www.it120.cc/info/help/14152)
 
 
 ## 运行小程序
@@ -65,3 +67,13 @@ npm run dev
 然后打开小程序的开发工具，导入本项目（当前项目下的  dist 文件夹下）
 ```
 
+## 常见问题
+
+### 如何添加名片 
+- 登录后台，左侧菜单 “工厂设置” --> “模块管理” ，启用 “AI名片” 模块，然后退出重新登录后台你将可以看到名片的相关菜单
+- 点击“访客管理”，选中某个用户给其分配名片
+- 点击“名片管理”，你将能看到所有的名片信息
+### 如何设置默认名片
+- 设置默认名片后，任何用户进入小程序后，将会加载指定的某一张默认名片进行展示
+- 首先你要启用“系统参数设置”模块，通过左侧菜单 “工厂设置” --> “模块管理”
+- [系统参数设置](https://www.it120.cc/info/help/14152)
