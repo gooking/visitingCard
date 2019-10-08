@@ -1,6 +1,6 @@
 <template>
   <div class="support">
-    v 3.1
+    v 3.2
   </div>
 </template>
 

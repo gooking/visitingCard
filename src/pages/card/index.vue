@@ -1,4 +1,4 @@
-<template>
+<template>  
   <div v-if="cardUserInfo" class="container">
     <div class="max-width">
       <img class="userinfo-avatar" :src="cardUserInfo.base.avatarUrl" mode="widthFix" />
@@ -81,6 +81,13 @@
       <div class="p3" @click="openShare=false"> 取消 </div>
       <div class="p2"></div>
     </div>    
+    <support />
+  </div>
+  <div v-else class="container" style="background-color:#fff;padding-top:200rpx;">
+    <h1 class="title">登录后查看名片</h1>
+    <p class="profile" style="margin-top:20rpx;font-size: 14px;">您当前未登录，无法展示名片数据</p>
+    <p class="profile" style="font-size: 14px;">微信授权登录后，即可查看你的名片夹</p>
+    <button size="mini" class="button" type="primary" @click="goLogin">授权登录</button>
     <support />
   </div>
 </template>
@@ -253,6 +260,11 @@ export default {
       }
       return ''
     },
+    goLogin () {
+      wx.navigateTo({
+        url: '/pages/authorization/main'
+      })
+    },
     async fetchDefaultMPUID () {
       const _this = this
       const myUserInfo = await request({
@@ -262,12 +274,12 @@ export default {
           token: _this.userInfo.token
         }
       })
-      if (myUserInfo.code === 2000) {
-        wx.navigateTo({
-          url: '/pages/authorization/main'
-        })
-        return
-      }
+      // if (myUserInfo.code === 2000) {
+      //   wx.navigateTo({
+      //     url: '/pages/authorization/main'
+      //   })
+      //   return
+      // }
       if (myUserInfo.code === 0 && myUserInfo.data.userLevel && myUserInfo.data.userLevel.name === 'aicard') {
         return myUserInfo.data.base.id
       }
@@ -309,11 +321,11 @@ export default {
       wx.setStorageSync('cardUid', scene)
     }
     this.userInfo = wx.getStorageSync('userInfo')
-    if (!this.userInfo) {
-      wx.navigateTo({
-        url: '/pages/authorization/main'
-      })
-    }
+    // if (!this.userInfo) {
+    //   wx.navigateTo({
+    //     url: '/pages/authorization/main'
+    //   })
+    // }
   },
   onShareAppMessage: function () {
     return {
