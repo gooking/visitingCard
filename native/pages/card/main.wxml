@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="max-width">
+    <image class="userinfo-avatar" src="{{cardUserInfo.base.avatarUrl}}" mode="widthFix" />
+  </view>
+  <view class="profile-box">
+    <view class="profile">
+      <view class="name">{{ cardUserInfo.base.nick }}</view>
+      <view class="position">{{ cardUserInfo.ext ? cardUserInfo.ext['职位'] : '-' }}</view>
+    </view>
+    <view class="profile2">
+      <view class="name">手机</view>
+      <view class="position">{{cardUserInfo.base.mobile}}</view>
+      <view class="action">
+        <button class="action" bindtap="callPhone">拨打</button>
+      </view>
+    </view>
+    <view wx:for="{{cardUserInfo.ext}}" wx:for-index='k' wx:key="index" class="profile2">
+      <view class="name">{{k}}</view>
+      <view class="position">{{item}}</view>
+      <view class="action">
+        <button class="action" data-v="{{item}}" bindtap="copyData">复制</button>
+      </view>
+    </view>
+  </view>
+  <view class="action-buttons">
+    <view class="button" bindtap="createHaibao">
+      <image class="img" src="/images/mp/posters.png" />
+      <view class="txt">生成海报</view>
+    </view>
+    <view class="button" bindtap="addPhoneContact">
+      <image class="img" src="/images/mp/txl.png" />
+      <view class="txt">存入通讯录</view>
+    </view>
+    <view class="button">
+      <button open-type="share" plain="true" style="border:none;">
+        <image class="img" style="margin-left:0;" src="/images/mp/share.png" />
+      </button>
+      <view class="txt">分享好友</view>
+    </view>
+  </view>
+  <view>
+    <image wx:if="{{ qrcode }}" class="qrcode" src="{{qrcode}}" />
+  </view>
+  <view wx:if="{{showMpjbutton}}" class="sharempj" bindtap="goIndex">
+    <image class="shareimg" src="/images/mp/mpj.png" />
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<import src="/template/login/index.wxml" />
+
+<view class="container">
+  <view wx:if="{{item.ext}}" wx:for="{{cardList}}" wx:key="id" class="card" data-id="{{item.base.id}}" bindtap="goCard">
+    <view class="profile">
+      <view class="name">{{ item.base.nick }}</view>
+      <view class="position">{{ item.ext['职位'] }}</view>
+      <view class="phone">{{ item.base.mobile }}</view>
+      <view class="mail">{{ item.ext['邮箱'] }}</view>
+    </view>
+    <view class="photo">
+      <image class="userinfo-avatar" src="{{item.base.avatarUrl}}" mode="widthFix" />
+    </view>
+  </view>
+</view>
+
+<template is="apifmLogin" data="{{wxlogin: wxlogin}}" />

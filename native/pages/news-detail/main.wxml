@@ -1,0 +1,9 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<div class="container" style="background-color: #fff">
+  <div class="title">{{newsObject.title}}</div>
+  <div class="datetime">{{newsObject.dateAdd}}</div>
+  <div class="wxparse-content">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </div>
+</div>

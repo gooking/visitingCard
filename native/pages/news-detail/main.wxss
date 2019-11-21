@@ -1,0 +1,17 @@
+@import "/wxParse/wxParse.wxss";
+
+.title {
+  text-align: left;
+  width:700rpx;
+}
+.datetime {
+  width:700rpx;
+  font-size: 12px;
+  margin-top: 10px;
+  color:#aaa;
+}
+.wxparse-content {
+  width: 700rpx;
+  text-align: left;
+  font-size: 14px;
+}

@@ -1,0 +1,38 @@
+@import "/template/login/index.wxss";
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 680rpx;
+  height: 300rpx;
+  background-color: #ffffff;
+  border-radius:10px;
+  margin-top: 30rpx;
+}
+.card .profile {
+  width: 400rpx;
+  color:#555555;
+  padding-left: 20rpx;
+}
+.card .profile .name {
+  font-size: 30px;
+}
+.card .profile .position {
+  font-size: 20px;
+}
+.card .profile .phone {
+  margin-top: 60rpx;
+  font-size: 15px;
+}
+.card .profile .mail {
+  font-size: 15px;
+}
+.card .photo {
+  width: 280rpx;
+  height: 300rpx;
+  overflow: hidden;
+}
+.card .photo .userinfo-avatar {
+  width: 280rpx;
+  border-radius: 10px;
+}

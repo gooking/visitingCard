@@ -1,0 +1,13 @@
+<div class="container" style="background-color: #fff;">
+  <div wx:if="{{!newsList}}" class="noData">
+    <image class="logo" src="/static/images/nodata-message.png" mode="widthFix" />
+    <div>暂无数据 ~ </div>
+  </div>
+  <div wx:for="{{newsList}}" wx:for-index='id' class="newsList" bindtap="goDetail" data-id="{{item.id}}">
+    <div wx:if="{{item.pic}}" class="cover">
+      <image class="cover-img" src="{{item.pic}}" mode="widthFix" />
+    </div>
+    <div class="title">{{item.title}}</div>
+    <div class="descript">{{item.descript}}</div>
+  </div>
+</div>

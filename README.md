@@ -1,28 +1,32 @@
 # AI名片小程序
 
-#### 介绍
-微信小程序开发的电子名片应用，抛砖引玉，欢迎大家一起来维护，贡献代码
+## 版本说明
 
-本项目使用 MPVUE 框架进行开发，请根据下面的说明进行配置
+- mpvue 文件夹内的为 mpvue 版本的小程序
+- native 文件夹内的为原生版本的小程序
+
+请根据你自己的需要选择合适的版本，mpvue 版本将不再跟进维护，后续维护都将在原生版本上进行
+
+## 介绍
 
 本项目的 api接口及后台管理直接嫁接使用的 [api工厂](https://www.it120.cc/) 的免费云接口和云后台，在此先表示感谢！
 
 本项目我们将会持续的维护下去，同时欢迎大家踊跃提交 ISSUE 或者加入进来一起开发和维护本项目！
 
-#### 接口 & 后台声明
+## 接口 & 后台声明
 
 本项目为纯前端项目，由于人力和精力所限，本项目并未有开发配套的后台系统，而是直接使用了 [api 工厂](https://www.it120.cc/) 提供的免费接口和后台，可以完全满足本项目的所有功能需求。
 
-- [接口 SDK](https://github.com/gooking/wxapi)
+- [接口 SDK](https://github.com/gooking/apifm-wxapi)
 
 - [免费后台](https://admin.it120.cc)
 
 - [WeUI](https://github.com/Tencent/weui-wxss/)
 
-#### 扫码体验
+## 扫码体验
 <img src="https://cdn.it120.cc/apifactory/2018/12/18/c2324da4eea91602f385db5b523b13ca.jpg" width="200px">
 
-#### 其他开源模板
+## 其他开源模板
 
 | 舔果果小铺 | 天使童装 | 面馆风格小程序 |
 | :------: | :------: | :------: |
@@ -35,13 +39,13 @@
 | :------: | :------: |
 | <img src="https://cdn.it120.cc/apifactory/2019/07/03/a86f7e46-1dbc-42fe-9495-65403659671e.jpeg" width="200px"> | <img src="https://cdn.it120.cc/apifactory/2019/07/03/fda59aeb-4943-4379-93bb-92856740bd6a.jpeg" width="200px"> |
 
-#### QQ交流群
+## QQ交流群
 
 534721253 （可用手机QQ扫下面的二维码加群）
 
 <img src="https://cdn.it120.cc/apifactory/2019/06/28/4f802bd3-6649-442a-a7a7-cc1a1196b5c7.png" width="200px">
 
-#### 使用说明
+## Mpvue版本使用说明
 
 1、 [api工厂](https://www.it120.cc/) 右上角注册免费开通您的专属后台
 > 
@@ -53,12 +57,12 @@
 > 
 5、工厂后台，微信设置中，配置 appid 和 secret
 > 
-6、 [设置小程序合法服务器域名](https://www.it120.cc/info/faq/10469)
+6、 [设置小程序合法服务器域名](https://www.yuque.com/apifm/doc/tvpou9)
 > 
-7、[系统参数设置](https://www.it120.cc/info/help/14152)
+7、[系统参数设置](https://www.yuque.com/apifm/doc/kcncad)
 
 
-## 运行小程序
+## Mpvue版本编译并运行小程序
 
 ```bash
 # 安装依赖
@@ -66,7 +70,30 @@ npm install
 # 编译小程序
 npm run dev
 ```
-> 然后打开小程序的开发工具，导入本项目（当前项目下的  dist 文件夹下的wx文件夹）
+然后打开小程序的开发工具，导入本项目（当前项目下的  dist 文件夹下的wx文件夹）
+
+
+## Native版本使用说明
+
+1、 [api工厂](https://www.it120.cc/) 右上角注册免费开通您的专属后台
+> 
+3、config.js 中的subDomain 改成你自己专属域名即可；
+> 
+5、工厂后台，微信设置中，配置 appid 和 secret
+> 
+6、 [设置小程序合法服务器域名](https://www.yuque.com/apifm/doc/tvpou9)
+> 
+7、[系统参数设置](https://www.yuque.com/apifm/doc/kcncad)
+
+## 初始化测试数据
+
+登录后台，左侧菜单 “工厂设置” --> “数据克隆” --> “将别人的数据克隆给我”
+
+对方商户ID填写  1708
+
+点击 “立即克隆” ，然后退出后台重新登录
+
+你将立即享有初始化测试数据，方便你进行测试
 
 ## 后台配置
 

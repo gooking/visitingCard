@@ -1,0 +1,139 @@
+.container {
+  width: 750rpx;
+  background-color: #faf9f9;
+}
+.max-width {
+  width: 750rpx;
+  background-color: #ffffff;
+}
+.userinfo-avatar {
+  width: 750rpx;
+}
+.profile-box {
+  position: relative;
+  width:650rpx;
+  background-color: #ffffff;
+  bottom:100rpx;
+}
+.action-buttons {
+  width: 750rpx;
+  display: flex;
+  text-align: center;
+}
+.action-buttons .button {
+  width: 250rpx;
+  text-align: center;
+}
+.action-buttons .button .img {
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 35rpx;
+  display: block;
+}
+.action-buttons .button .txt {
+  font-size: 12px;
+  display: block;
+}
+.profile {
+  text-align: left;
+  padding: 20rpx;
+  color:#555555;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+}
+.profile .name {
+  font-size: 20px;
+}
+.profile .position {
+  font-size: 12px;
+  margin-left: 30rpx;
+}
+.phone {
+  text-align: left;
+  padding: 20rpx;
+  font-size: 14px;
+}
+.profile2 {
+  text-align: left;
+  padding: 20rpx;
+  color:#555555;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+.profile2 .name {
+  font-size: 16px;
+  width:120rpx;
+}
+.profile2 .position {
+  font-size: 14px;
+  width:400rpx;
+}
+.profile2 .action {
+  font-size: 12px;
+  width:120rpx;
+}
+.share {
+  position:fixed;
+  right:0rpx;
+  top: 600rpx;
+}
+.sharempj {
+  position:fixed;
+  left:0rpx;
+  top: 60rpx;
+}
+.share .shareimg {
+  width:110rpx;
+  height:110rpx;
+}
+.sharempj .shareimg {
+  width:90rpx;
+  height:60rpx;
+}
+.shareFloatDiv1 {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-color:#555;filter:Alpha(Opacity=60);opacity:0.6;
+}
+.shareFloatDiv2 {
+  position:fixed;
+  width:100%;
+  height:400rpx;
+  background-color: #ffffff;
+  bottom: 0rpx;
+}
+.shareFloatDiv2 .p1 {
+  height:260rpx;
+  display: flex;
+  flex-direction: row;
+}
+.shareFloatDiv2 .p1 .wx {
+  font-size: 14px;
+  width:375rpx;
+  text-align: center;
+  padding-top: 50rpx;
+}
+.shareFloatDiv2 .p1 .wx .shareimg {
+  width:150rpx;
+  height:150rpx;
+}
+.shareFloatDiv2 .p2 {
+  height:20rpx;
+  background-color: #EEEEEE;
+}
+.shareFloatDiv2 .p3 {
+  height:100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color:#555555;
+  font-size: 14px;
+}
+.qrcode {
+  width:300rpx;
+  height:300rpx;
+  margin-top: 50rpx;
+}
