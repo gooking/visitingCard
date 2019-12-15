@@ -1,10 +1,12 @@
 const WXAPI = require('apifm-wxapi')
+const AUTH = require('../../utils/auth')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    wxlogin: true,
     showMpjbutton: false,
 
     openShare: false,
@@ -36,6 +38,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   async onShow () {
+    AUTH.checkHasLogined().then(isLogined => {
+      this.setData({
+        wxlogin: isLogined
+      })
+    })
     await WXAPI.queryConfigBatch('mallName,DEFAULT_FRIEND_UID').then(function (res) {
       if (res.code == 0) {
         res.data.forEach(config => {
@@ -199,5 +206,20 @@ Page({
       firstName: this.data.cardUserInfo.base.nick,
       mobilePhoneNumber: this.data.cardUserInfo.base.mobile
     })
+  },
+  cancelLogin() {
+    this.setData({
+      wxlogin: true
+    })
+  },
+  processLogin(e) {
+    if (!e.detail.userInfo) {
+      wx.showToast({
+        title: '已取消',
+        icon: 'none',
+      })
+      return;
+    }
+    AUTH.register(this);
   },
 })
