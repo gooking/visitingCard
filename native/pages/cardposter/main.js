@@ -1,4 +1,5 @@
 const WXAPI = require('apifm-wxapi')
+const APP = getApp()
 import imageUtil from '../../utils/image.js'
 
 
@@ -91,7 +92,7 @@ Page({
         const left = (imageSize.imageWidth - qrcodeWidth) / 2
         const top = imageSize.imageHeight + additionHeight / 2
         wx.getImageInfo({
-          src: wx.getStorageSync('_haibaoimg_qrcode'),
+          src: APP.globalData._haibaoimg_qrcode,
           success: (res) => {
             ctx.drawImage(res.path, left, top, qrcodeWidth, qrcodeWidth)
             setTimeout(function () {

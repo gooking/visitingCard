@@ -1,5 +1,6 @@
 const WXAPI = require('apifm-wxapi')
 const AUTH = require('../../utils/auth')
+const APP = getApp()
 Page({
 
   /**
@@ -53,7 +54,7 @@ Page({
     
     const cardUid = await this.getCardUid()
     this.getCardInfo(cardUid)
-    const qrcode = wx.getStorageSync('_haibaoimg_qrcode')
+    const qrcode = APP.globalData._haibaoimg_qrcode
     if (!qrcode) {
       // 获取二维码
       WXAPI.wxaQrcode({
@@ -63,7 +64,7 @@ Page({
         expireHours: 1
       }).then(res => {
         if(res.code == 0){
-          wx.setStorageSync('_haibaoimg_qrcode', res.data)
+          APP.globalData._haibaoimg_qrcode = res.data
           this.setData({
             qrcode: res.data
           })
