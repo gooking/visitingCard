@@ -63,7 +63,7 @@ App({
   },
   onShow (e) {
     if (e && e.query && e.query.cardUid) {
-      wx.setStorageSync('cardUid', e.query.cardUid)
+      this.globalData.cardUid = e.query.cardUid
       wx.setStorageSync('referrer', e.query.cardUid)
     }
     // 自动登录
@@ -74,6 +74,7 @@ App({
     })
   },
   globalData: {                
-    isConnected: true
+    isConnected: true,
+    cardUid: null
   }
 })

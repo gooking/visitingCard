@@ -24,7 +24,7 @@ Page({
     if (e.scene) { // 扫码
       const scene = decodeURIComponent(e.scene)
       wx.setStorageSync('referrer', scene)
-      wx.setStorageSync('cardUid', scene)
+      APP.globalData.cardUid = scene
     }    
   },
 
@@ -77,7 +77,7 @@ Page({
     }
   },
   async getCardUid(){
-    let cardUid = wx.getStorageSync('cardUid')
+    let cardUid = APP.globalData.cardUid
     const uid = wx.getStorageSync('uid')
     if (!cardUid) {
       // 没有通过链接或者扫码进来

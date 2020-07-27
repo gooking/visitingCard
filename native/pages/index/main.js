@@ -1,6 +1,6 @@
 const AUTH = require('../../utils/auth')
 const WXAPI = require('apifm-wxapi')
-
+const APP = getApp()
 Page({
 
   /**
@@ -71,7 +71,7 @@ Page({
   },
   goCard(e) {
     const uid = e.currentTarget.dataset.id
-    wx.setStorageSync('cardUid', uid)
+    APP.globalData.cardUid = uid
     wx.switchTab({
       url: '/pages/card/main'
     })
