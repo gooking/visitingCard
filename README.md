@@ -1,5 +1,9 @@
 # AI名片小程序
 
+## 码云镜像
+
+[https://gitee.com/javazj/visitingCard](https://gitee.com/javazj/visitingCard)
+
 ## 版本说明
 
 - mpvue 文件夹内的为 mpvue 版本的小程序
