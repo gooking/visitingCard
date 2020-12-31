@@ -7,20 +7,9 @@
       <view class="name">{{ cardUserInfo.base.nick }}</view>
       <view class="position">{{ cardUserInfo.ext ? cardUserInfo.ext['职位'] : '-' }}</view>
     </view>
-    <view class="profile2">
-      <view class="name">手机</view>
-      <view class="position">{{cardUserInfo.base.mobile}}</view>
-      <view class="action">
-        <button class="action" bindtap="callPhone">拨打</button>
-      </view>
-    </view>
-    <view wx:for="{{cardUserInfo.ext}}" wx:for-index='k' wx:key="index" class="profile2">
-      <view class="name">{{k}}</view>
-      <view class="position">{{item}}</view>
-      <view class="action">
-        <button class="action" data-v="{{item}}" bindtap="copyData">复制</button>
-      </view>
-    </view>
+    <van-cell title="手机" value="{{cardUserInfo.base.mobile}}" is-link bind:click="callPhone" />
+    <van-cell wx:for="{{cardUserInfo.ext}}" wx:for-index='k' wx:key="index" title="{{k}}" value="{{item}}" is-link data-v="{{item}}" bind:click="copyData" />
+    <van-cell wx:if="{{ cardUid == uid}}" title="资料管理" value="编辑" is-link url="/pages/user/info" />
   </view>
   <view class="action-buttons">
     <view class="button" bindtap="createHaibao">

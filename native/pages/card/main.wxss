@@ -15,6 +15,7 @@
   width:650rpx;
   background-color: #ffffff;
   bottom:100rpx;
+  border-radius: 32rpx;
 }
 .action-buttons {
   width: 750rpx;

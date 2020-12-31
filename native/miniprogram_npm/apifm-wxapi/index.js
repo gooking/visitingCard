@@ -492,6 +492,13 @@ module.exports = {
       token: token, encryptedData: encryptedData, iv: iv, pwd: pwd
     });
   },
+  bindMobileWxapp: function bindMobileWxapp(token, code, encryptedData, iv) {
+    var pwd = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
+
+    return request('/user/wxapp/bindMobile', true, 'post', {
+      token: token, code: code, encryptedData: encryptedData, iv: iv, pwd: pwd
+    });
+  },
   bindMobileSms: function bindMobileSms(token, mobile, code) {
     var pwd = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
 

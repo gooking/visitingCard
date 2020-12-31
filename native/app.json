@@ -5,7 +5,8 @@
     "pages/index/main",
     "pages/news/main",
     "pages/products/main",
-    "pages/news-detail/main"
+    "pages/news-detail/main",
+    "pages/user/info"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -40,8 +41,12 @@
       }
     ]
   },
-  "navigateToMiniProgramAppIdList": [
-    "wx56c8f077de74b07c"
-  ],
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-uploader": "@vant/weapp/uploader/index"
+  },
   "sitemapLocation": "sitemap.json"
 }

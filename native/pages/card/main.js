@@ -75,6 +75,10 @@ Page({
         qrcode
       })
     }
+    this.setData({
+      cardUid,
+      uid: wx.getStorageSync('uid')
+    })
   },
   async getCardUid(){
     let cardUid = APP.globalData.cardUid
