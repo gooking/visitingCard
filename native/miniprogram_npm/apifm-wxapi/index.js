@@ -979,6 +979,18 @@ module.exports = {
     return request('/user/email/bindUsername', true, 'post', {
       token: token, email: email, code: code, pwd: pwd
     });
+  },
+  authorize: (data) => {
+    return request('/user/wxapp/authorize', true, 'post', data)
+  },
+  bindSeller: data => {
+    return request('/user/bindSeller', true, 'post', data)
+  },
+  channelDataPush: function channelDataPush(key, content) {
+    return request('/channelData/push', true, 'post', { key: key, content: content });
+  },
+  channelDataPull: function channelDataPull(key) {
+    return request('/channelData/pull', true, 'get', { key: key });
   }
 };
 
