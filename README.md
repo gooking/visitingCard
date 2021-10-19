@@ -28,20 +28,21 @@
 - [WeUI](https://github.com/Tencent/weui-wxss/)
 
 ## 扫码体验
-<img src="https://cdn.it120.cc/apifactory/2018/12/18/c2324da4eea91602f385db5b523b13ca.jpg" width="200px">
+<img src="https://7.s2m.cc/2021/10/19/e4fdb6c6-fc15-4d22-b6bf-c06788805c03.jpeg" width="200px">
+<img src="https://dcdn.it120.cc/2021/09/13/70b29e1e-c1f6-4197-8995-646cf2b1efea.jpeg" width="200px">
 
 ## 其他开源模板
 
 | 舔果果小铺 | 天使童装 | 面馆风格小程序 |
 | :------: | :------: | :------: |
-| <img src="https://cdn.it120.cc/apifactory/2018/04/01/b7b8f5a0fcfc72454ade8510ab929717.jpg" width="200px"> | <img src="https://cdn.it120.cc/apifactory/2019/06/28/a8304003-3218-4a47-95cf-84d82ebdc07b.jpg" width="200px"> | <img src="https://cdn.it120.cc/apifactory/2019/03/29/9e30cfe31eabcd218eb9c434f17e9295.jpg" width="200px"> | 
+| <img src="https://www.it120.cc/images/tgg.jpg" width="200px"> | <img src="https://www.it120.cc/images/tz.jpg" width="200px"> | <img src="https://dcdn.it120.cc/2020/01/22/1f678a7e-7740-4dc9-b89a-505b706ec1c2.jpeg" width="200px"> | 
 | [开源地址](https://github.com/walcer/TianguoguoXiaopu) | [开源地址](https://github.com/EastWorld/wechat-app-mall) | [开源地址](https://gitee.com/javazj/noodle_shop_procedures) |
 
 ## 联系作者
 
-| 微信好友 | 支付宝好友 |
-| :------: | :------: |
-| <img src="https://cdn.it120.cc/apifactory/2019/07/03/a86f7e46-1dbc-42fe-9495-65403659671e.jpeg" width="200px"> | <img src="https://cdn.it120.cc/apifactory/2019/07/03/fda59aeb-4943-4379-93bb-92856740bd6a.jpeg" width="200px"> |
+| 微信好友 |
+| :------: |
+| <img src="https://dcdn.it120.cc/2021/09/13/61a80363-9085-4a10-9447-e276a3d40ab3.jpeg" width="200px"> |
 
 ## QQ交流群
 
