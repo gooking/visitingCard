@@ -31,12 +31,13 @@
 <img src="https://7.s2m.cc/2021/10/19/e4fdb6c6-fc15-4d22-b6bf-c06788805c03.jpeg" width="200px">
 <img src="https://dcdn.it120.cc/2021/09/13/70b29e1e-c1f6-4197-8995-646cf2b1efea.jpeg" width="200px">
 
-## 其他开源模板
-
-| 舔果果小铺 | 天使童装 | 面馆风格小程序 |
-| :------: | :------: | :------: |
-| <img src="https://www.it120.cc/images/tgg.jpg" width="200px"> | <img src="https://www.it120.cc/images/tz.jpg" width="200px"> | <img src="https://dcdn.it120.cc/2020/01/22/1f678a7e-7740-4dc9-b89a-505b706ec1c2.jpeg" width="200px"> | 
-| [开源地址](https://github.com/walcer/TianguoguoXiaopu) | [开源地址](https://github.com/EastWorld/wechat-app-mall) | [开源地址](https://gitee.com/javazj/noodle_shop_procedures) |
+## 其他优秀开源模板推荐
+- [天使童装](https://github.com/EastWorld/wechat-app-mall) [码云镜像](https://gitee.com/javazj/wechat-app-mall)
+- [天使童装（uni-app版本）](https://github.com/gooking/uni-app-mall) [码云镜像](https://gitee.com/javazj/uni-app-mall)
+- [舔果果小铺（升级版）](https://github.com/gooking/TianguoguoXiaopu)
+- [面馆风格小程序](https://gitee.com/javazj/noodle_shop_procedures)
+- [AI名片](https://github.com/gooking/visitingCard)
+- [仿海底捞订座排队 (uni-app)](https://github.com/gooking/dingzuopaidui) [码云镜像](https://gitee.com/javazj/dingzuopaidui)
 
 ## 联系作者
 
