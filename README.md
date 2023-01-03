@@ -28,7 +28,7 @@
 - [WeUI](https://github.com/Tencent/weui-wxss/)
 
 ## 扫码体验
-<img src="https://7.s2m.cc/2021/10/19/e4fdb6c6-fc15-4d22-b6bf-c06788805c03.jpeg" width="200px">
+<img src="https://dcdn.it120.cc/2023/01/03/8d4c3697-76c0-4cc9-9ed3-8c197ee1335b.jpeg" width="200px">
 <img src="https://dcdn.it120.cc/2021/09/13/70b29e1e-c1f6-4197-8995-646cf2b1efea.jpeg" width="200px">
 
 ## 其他优秀开源模板推荐
