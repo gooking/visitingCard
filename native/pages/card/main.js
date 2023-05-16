@@ -1,5 +1,4 @@
 const WXAPI = require('apifm-wxapi')
-const AUTH = require('../../utils/auth')
 const APP = getApp()
 Page({
 
@@ -26,9 +25,6 @@ Page({
       wx.setStorageSync('referrer', scene)
       APP.globalData.cardUid = scene
     }
-    AUTH.authorize().then(res => {
-      AUTH.bindSeller()
-    })
   },
 
   /**
@@ -42,11 +38,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   async onShow () {
-    AUTH.checkHasLogined().then(isLogined => {
-      this.setData({
-        wxlogin: isLogined
-      })
-    })
     await WXAPI.queryConfigBatch('mallName,DEFAULT_FRIEND_UID').then(function (res) {
       if (res.code == 0) {
         res.data.forEach(config => {
@@ -64,7 +55,8 @@ Page({
         scene: cardUid,
         page: 'pages/card/main',
         is_hyaline: false,
-        expireHours: 1
+        expireHours: 1,
+        autoColor: true
       }).then(res => {
         if(res.code == 0){
           APP.globalData._haibaoimg_qrcode = res.data
@@ -130,41 +122,17 @@ Page({
       this.setData(_data)
     }
   },
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
     return {
       title: '您好，我是 ' + wx.getStorageSync('mallName') + ' 的' + this.data.cardUserInfo.base.nick + '，请惠存我的名片。',
       path: '/pages/card/main?cardUid=' + this.data.cardUserInfo.base.id,
+      imageUrl: this.data.cardUserInfo.base.avatarUrl
+    }
+  },
+  onShareTimeline() {    
+    return {
+      title: '您好，我是 ' + wx.getStorageSync('mallName') + ' 的' + this.data.cardUserInfo.base.nick + '，请惠存我的名片。',
+      query: 'cardUid=' + this.data.cardUserInfo.base.id,
       imageUrl: this.data.cardUserInfo.base.avatarUrl
     }
   },
@@ -214,49 +182,5 @@ Page({
       firstName: this.data.cardUserInfo.base.nick,
       mobilePhoneNumber: this.data.cardUserInfo.base.mobile
     })
-  },
-  cancelLogin() {
-    this.setData({
-      wxlogin: true
-    })
-  },
-  updateUserInfo(e) {
-    wx.getUserProfile({
-      lang: 'zh_CN',
-      desc: '用于完善会员资料',
-      success: res => {
-        console.log(res);
-        this._updateUserInfo(res.userInfo)
-      },
-      fail: err => {
-        console.log(err);
-        wx.showToast({
-          title: err.errMsg,
-          icon: 'none'
-        })
-      }
-    })
-  },
-  async _updateUserInfo(userInfo) {
-    const postData = {
-      token: wx.getStorageSync('token'),
-      nick: userInfo.nickName,
-      avatarUrl: userInfo.avatarUrl,
-      city: userInfo.city,
-      province: userInfo.province,
-      gender: userInfo.gender,
-    }
-    const res = await WXAPI.modifyUserInfo(postData)
-    if (res.code != 0) {
-      wx.showToast({
-        title: res.msg,
-        icon: 'none'
-      })
-      return
-    }
-    wx.showToast({
-      title: '登陆成功',
-    })
-    this.onShow()
   },
 })

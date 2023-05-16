@@ -138,4 +138,5 @@
   width:300rpx;
   height:300rpx;
   margin-top: 50rpx;
+  border-radius: 50%;
 }

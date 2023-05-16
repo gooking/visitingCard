@@ -41,15 +41,9 @@
 
 ## 联系作者
 
-| 微信好友 |
-| :------: |
-| <img src="https://dcdn.it120.cc/2021/09/13/61a80363-9085-4a10-9447-e276a3d40ab3.jpeg" width="200px"> |
-
-## QQ交流群
-
-534721253 （可用手机QQ扫下面的二维码加群）
-
-<img src="https://cdn.it120.cc/apifactory/2019/06/28/4f802bd3-6649-442a-a7a7-cc1a1196b5c7.png" width="200px">
+| 小程序咨询 | api工厂咨询 |
+| :------: | :------: |
+| <img src="https://dcdn.it120.cc/2021/09/13/61a80363-9085-4a10-9447-e276a3d40ab3.jpeg" width="200px"> | <img src="https://dcdn.it120.cc/2023/05/16/492a5e8b-a680-4c0c-91a9-19431b52b427.png" width="200px"> |
 
 ## Mpvue版本使用说明
 
