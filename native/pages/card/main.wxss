@@ -16,6 +16,7 @@
   background-color: #ffffff;
   bottom:100rpx;
   border-radius: 32rpx;
+  overflow: hidden;
 }
 .action-buttons {
   width: 750rpx;
@@ -133,6 +134,9 @@
   text-align: center;
   color:#555555;
   font-size: 14px;
+}
+.qrcode-box {
+  padding: 32rpx;
 }
 .qrcode {
   width:300rpx;

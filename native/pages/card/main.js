@@ -6,7 +6,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    wxlogin: true,
     showMpjbutton: false,
 
     openShare: false,
@@ -25,6 +24,9 @@ Page({
       wx.setStorageSync('referrer', scene)
       APP.globalData.cardUid = scene
     }
+    setTimeout(() => {
+      this.showNickPOP()
+    }, 3000);
   },
 
   /**
@@ -182,5 +184,15 @@ Page({
       firstName: this.data.cardUserInfo.base.nick,
       mobilePhoneNumber: this.data.cardUserInfo.base.mobile
     })
+  },
+  async showNickPOP() {
+    const res = await WXAPI.userDetail(wx.getStorageSync('token'))
+    if (res.code == 0 && (!res.data.base.nick || !res.data.base.avatarUrl)) {
+      this.setData({
+        nickPopShow: true,
+        popnick: res.data.base.nick ? res.data.base.nick : '',
+        popavatarUrl: res.data.base.avatarUrl ? res.data.base.avatarUrl : '',
+      })
+    }
   },
 })

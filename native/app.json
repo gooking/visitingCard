@@ -42,11 +42,13 @@
     ]
   },
   "usingComponents": {
+    "login": "/components/login/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-field": "@vant/weapp/field/index",
     "van-button": "@vant/weapp/button/index",
-    "van-uploader": "@vant/weapp/uploader/index"
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-popup": "@vant/weapp/popup/index"
   },
   "sitemapLocation": "sitemap.json"
 }

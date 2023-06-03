@@ -27,14 +27,12 @@
       <view class="txt">分享好友</view>
     </view>
   </view>
-  <view>
-    <image wx:if="{{ qrcode }}" class="qrcode" src="{{qrcode}}" />
+  <view class="qrcode-box">
+    <image wx:if="{{ qrcode }}" class="qrcode" src="{{qrcode}}" show-menu-by-longpress />
   </view>
   <view wx:if="{{showMpjbutton}}" class="sharempj" bindtap="goIndex">
     <image class="shareimg" src="/images/mp/mpj.png" />
   </view>
 </view>
 
-
-<import src="/template/login/index.wxml" />
-<template is="apifmLogin" data="{{wxlogin: wxlogin}}" />
+<login show="{{ nickPopShow }}" avatarUrl="{{ popavatarUrl }}" name="{{ popnick }}" />
