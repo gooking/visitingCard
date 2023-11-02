@@ -61,7 +61,7 @@ Page({
       nick: this.data.nick
     }
     if (this.data.picsList && this.data.picsList.length > 0) {
-      const res = await WXAPI.uploadFile(wx.getStorageSync('token'), this.data.picsList[0].url)
+      const res = await WXAPI.uploadFileV2(wx.getStorageSync('token'), this.data.picsList[0].url)
       if (res.code == 0) {
         postData.avatarUrl = res.data.url
       }
