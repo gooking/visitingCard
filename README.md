@@ -44,6 +44,7 @@
 - [企业微展](https://github.com/gooking/qiyeweizan)  / [码云镜像](https://gitee.com/javazj/qiyeweizan)
 - [无人棋牌室](https://github.com/gooking/wurenqipai)  / [码云镜像](https://gitee.com/javazj/wurenqipai)
 - [酒店客房服务小程序](https://github.com/gooking/hotelRoomService)  / [码云镜像](https://gitee.com/javazj/hotelRoomService)
+- [面包店风格小程序](https://github.com/gooking/bread)  / [码云镜像](https://gitee.com/javazj/bread)
 
 ## 联系作者
 
@@ -126,3 +127,5 @@ npm run dev
 - 设置默认名片后，任何用户进入小程序后，将会加载指定的某一张默认名片进行展示
 - 首先你要启用“系统参数设置”模块，通过左侧菜单 “工厂设置” --> “模块管理”
 - [系统参数设置](https://www.it120.cc/help/kcncad.html)
+### 如何添加或者删除头像昵称
+- `components\login\index.wxml` 里面的内容全部删掉即可
