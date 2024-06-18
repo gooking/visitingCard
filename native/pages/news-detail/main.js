@@ -7,11 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    newsId: undefined,
-    newsObject: {
-      title: undefined,
-      content: undefined
-    }
+    newsId: undefined
   },
 
   /**
@@ -69,12 +65,12 @@ Page({
     WXAPI.cmsArticleDetailV3({ id: this.data.newsId }).then(res => {
       if (res.code === 0) {
         this.setData({
-          newsObject: res.data
+          newsObject: res.data.info
         })
         wx.setNavigationBarTitle({
           title: res.data.info.title + ' - ' + wx.getStorageSync('mallName')
         })
-        WxParse.wxParse('article', 'html', res.data.content, this, 5);
+        WxParse.wxParse('article', 'html', res.data.info.content, this, 5);
       }
     })
   }
