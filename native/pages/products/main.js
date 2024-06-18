@@ -60,12 +60,12 @@ Page({
 
   },
   fetchNews() {
-    WXAPI.cmsArticles({
+    WXAPI.cmsArticlesV3({
       categoryId: wx.getStorageSync('news_category_zs').id
     }).then(res => {
       if (res.code === 0) {
         this.setData({
-          newsList: res.data
+          newsList: res.data.result
         })
       } else {
         this.setData({

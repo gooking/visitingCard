@@ -66,13 +66,13 @@ Page({
 
   },
   fetchNewsContent() {
-    WXAPI.cmsArticleDetail(this.data.newsId).then(res => {
+    WXAPI.cmsArticleDetailV3({ id: this.data.newsId }).then(res => {
       if (res.code === 0) {
         this.setData({
           newsObject: res.data
         })
         wx.setNavigationBarTitle({
-          title: res.data.title + ' - ' + wx.getStorageSync('mallName')
+          title: res.data.info.title + ' - ' + wx.getStorageSync('mallName')
         })
         WxParse.wxParse('article', 'html', res.data.content, this, 5);
       }

@@ -3,7 +3,8 @@ const CONFIG = require('config.js')
 const AUTH = require('utils/auth')
 App({
   onLaunch: function() {
-    WXAPI.init(CONFIG.subDomain) // 从根目录的 config.js 文件中读取
+    WXAPI.init(CONFIG.subDomain)
+    WXAPI.setMerchantId(CONFIG.merchantId)
     const that = this;
     // 检测新版本
     const updateManager = wx.getUpdateManager()
