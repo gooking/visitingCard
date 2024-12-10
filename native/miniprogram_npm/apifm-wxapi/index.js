@@ -1153,8 +1153,8 @@ module.exports = {
       page: page, pageSize: pageSize, goodsId: goodsId
     });
   },
-  wxaQrcode: function wxaQrcode(data) {
-    return request('/qrcode/wxa/unlimit', true, 'post', data);
+  wxaQrcode: (data) => {
+    return request('https://oss.apifm.com/' + subDomain + '/qrcode/wxa/unlimit', true, 'post', data)
   },
   ttaQrcode: function ttaQrcode(paramsJson, expireHours) {
     return request('/user/tt/microapp/qrcode', true, 'post', {
@@ -1162,8 +1162,8 @@ module.exports = {
       expireHours: expireHours
     });
   },
-  commonQrcode: function commonQrcode(data) {
-    return request('/qrcode/content', true, 'post', data);
+  commonQrcode: (data) => {
+    return request('https://oss.apifm.com/' + subDomain + '/qrcode/content', true, 'post', data)
   },
   uploadFile: function uploadFile(token, tempFilePath) {
     var expireHours = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
