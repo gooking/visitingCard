@@ -21,9 +21,9 @@
 
 本项目为纯前端项目，由于人力和精力所限，本项目并未有开发配套的后台系统，而是直接使用了 [api 工厂](https://www.it120.cc/) 提供的免费接口和后台，可以完全满足本项目的所有功能需求。
 
-- [接口 SDK](https://github.com/gooking/apifm-wxapi)
+- [接口 SDK](https://www.it120.cc/sdk/index.html)
 
-- [免费后台](https://admin.it120.cc)
+- [免费后台](https://admin.s2m.cc)
 
 - [WeUI](https://github.com/Tencent/weui-wxss/)
 
@@ -46,6 +46,7 @@
 - [酒店客房服务小程序](https://github.com/gooking/hotelRoomService)  / [码云镜像](https://gitee.com/javazj/hotelRoomService)
 - [面包店风格小程序](https://github.com/gooking/bread)  / [码云镜像](https://gitee.com/javazj/bread)
 - [朋友圈发圈素材小程序](https://github.com/gooking/moments)  / [码云镜像](https://gitee.com/javazj/moments)
+- [小红书企业微展](https://github.com/gooking/xhs-qiyeweizan)  / [码云镜像](https://gitee.com/javazj/xhs-qiyeweizan)
 
 ## 联系作者
 
@@ -127,6 +128,6 @@ npm run dev
 ### 如何设置默认名片
 - 设置默认名片后，任何用户进入小程序后，将会加载指定的某一张默认名片进行展示
 - 首先你要启用“系统参数设置”模块，通过左侧菜单 “工厂设置” --> “模块管理”
-- [系统参数设置](https://www.it120.cc/help/kcncad.html)
+- [系统参数设置](https://www.yuque.com/apifm/doc/kcncad)
 ### 如何添加或者删除头像昵称
 - `components\login\index.wxml` 里面的内容全部删掉即可
