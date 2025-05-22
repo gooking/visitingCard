@@ -58,7 +58,8 @@ Page({
         page: 'pages/card/main',
         is_hyaline: false,
         expireHours: 1,
-        autoColor: true
+        autoColor: true,
+        check_path: false,
       }).then(res => {
         if(res.code == 0){
           APP.globalData._haibaoimg_qrcode = res.data
