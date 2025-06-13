@@ -4,7 +4,7 @@
 
 [码云镜像](https://gitee.com/javazj/visitingCard)
 
-[GitCode镜像](https://gitcode.com/gooking2/wechat-app-mall)
+[GitCode镜像](https://gitcode.com/gooking2/visitingCard)
 
 ## 版本说明
 
