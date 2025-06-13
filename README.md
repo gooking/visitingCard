@@ -1,8 +1,10 @@
 # AI名片小程序
 
-## 码云镜像
+## 加速镜像
 
-[https://gitee.com/javazj/visitingCard](https://gitee.com/javazj/visitingCard)
+[码云镜像](https://gitee.com/javazj/visitingCard)
+
+[GitCode镜像](https://gitcode.com/gooking2/wechat-app-mall)
 
 ## 版本说明
 
