@@ -50,6 +50,7 @@ Component({
         token: wx.getStorageSync('token'),
         nick: this.data.nick,
       }
+      // https://www.yuque.com/apifm/nu0f75/ykr2zr
       const res = await WXAPI.modifyUserInfoV2(postData)
       if (res.code != 0) {
         wx.showToast({
@@ -67,6 +68,7 @@ Component({
     },
     async onChooseAvatar(e) {
       let avatarUrl = e.detail.avatarUrl
+      // https://www.yuque.com/apifm/nu0f75/ygvqh6
       let res = await WXAPI.uploadFileV2(wx.getStorageSync('token'), avatarUrl)
       if (res.code != 0) {
         wx.showToast({
@@ -76,6 +78,7 @@ Component({
         return
       }
       avatarUrl = res.data.url
+      // https://www.yuque.com/apifm/nu0f75/ykr2zr
       res = await WXAPI.modifyUserInfoV2({
         token: wx.getStorageSync('token'),
         avatarUrl,

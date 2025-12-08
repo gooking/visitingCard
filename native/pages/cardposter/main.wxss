@@ -1,8 +1,41 @@
-.canvas {
-  width:750rpx;
+/* 海报页面 - 精致设计 */
+page {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas {
+  width: 690rpx;
+  margin: 30rpx auto;
+  border-radius: 24rpx;
+  box-shadow: 0 16rpx 48rpx rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #ffffff;
+  border: 8rpx solid #ffffff;
+}
+
 .button {
-  width: 700rpx;
-  margin-top: 30rpx;
-  margin-bottom: 30rpx;
+  width: 690rpx;
+  margin: 40rpx auto;
+  height: 96rpx;
+  line-height: 96rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 48rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 600;
+  box-shadow: 0 8rpx 24rpx rgba(102, 126, 234, 0.3);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4rpx 16rpx rgba(102, 126, 234, 0.2);
 }

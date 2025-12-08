@@ -40,6 +40,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   async onShow () {
+    // https://www.yuque.com/apifm/nu0f75/dis5tl
     await WXAPI.queryConfigBatch('mallName,DEFAULT_FRIEND_UID').then(function (res) {
       if (res.code == 0) {
         res.data.forEach(config => {
@@ -52,7 +53,7 @@ Page({
     this.getCardInfo(cardUid)
     const qrcode = APP.globalData._haibaoimg_qrcode
     if (!qrcode) {
-      // 获取二维码
+      // 获取二维码 https://www.yuque.com/apifm/nu0f75/ak40es
       WXAPI.wxaQrcode({
         scene: cardUid,
         page: 'pages/card/main',
@@ -84,7 +85,7 @@ Page({
     if (!cardUid) {
       // 没有通过链接或者扫码进来
       if (uid) {
-        // 当前用户已登录
+        // 当前用户已登录 https://www.yuque.com/apifm/nu0f75/zgf8pu
         const res = await WXAPI.userDetail(wx.getStorageSync('token'))
         if (res.code == 0 && res.data.userLevel && res.data.userLevel.name === 'aicard') {
           return uid
@@ -99,10 +100,10 @@ Page({
     const uid = wx.getStorageSync('uid')
     const token = wx.getStorageSync('token')
     if (uid) {
-      // 添加到我的名片夹
+      // 添加到我的名片夹 https://www.yuque.com/apifm/nu0f75/be7qa3
       WXAPI.addFriend(token, cardUid)
     }
-    // 读取名片详情信息
+    // 读取名片详情信息 https://www.yuque.com/apifm/nu0f75/ym7226
     const res = await WXAPI.friendUserDetail(token, cardUid)
     if (res.code == 0) {
       const _data = {
@@ -187,6 +188,7 @@ Page({
     })
   },
   async showNickPOP() {
+    // https://www.yuque.com/apifm/nu0f75/zgf8pu
     const res = await WXAPI.userDetail(wx.getStorageSync('token'))
     if (res.code == 0 && (!res.data.base.nick || !res.data.base.avatarUrl)) {
       this.setData({

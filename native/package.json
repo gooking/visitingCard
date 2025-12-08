@@ -4,7 +4,7 @@
   "description": "微信小程序商城，微信小程序微店",
   "main": "app.js",
   "dependencies": {
-    "apifm-wxapi": "^24.06.18"
+    "apifm-wxapi": "^25.12.8"
   },
   "devDependencies": {},
   "scripts": {

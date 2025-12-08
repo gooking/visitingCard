@@ -23,6 +23,7 @@ export default {
   },
   async _drawQrcode() {
     const _this = this
+    // https://www.yuque.com/apifm/nu0f75/ak40es
     const qrcodeRes = await WXAPI.wxaQrcode({
       scene: _this.data.goodsDetail.basicInfo.id + ',' + wx.getStorageSync('uid'),
       page: 'pages/goods-details/index',

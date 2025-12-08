@@ -1,15 +1,23 @@
 <import src="/template/login/index.wxml" />
 
 <view class="container">
+  <view wx:if="{{!cardList || cardList.length === 0}}" style="text-align: center; padding-top: 200rpx; color: #a0aec0; font-size: 28rpx;">
+    <view style="font-size: 80rpx; margin-bottom: 40rpx;">📇</view>
+    <view>暂无名片数据</view>
+  </view>
   <view wx:if="{{item.ext}}" wx:for="{{cardList}}" wx:key="id" class="card" data-id="{{item.base.id}}" bindtap="goCard">
     <view class="profile">
-      <view class="name">{{ item.base.nick }}</view>
-      <view class="position">{{ item.ext['职位'] }}</view>
-      <view class="phone">{{ item.base.mobile }}</view>
-      <view class="mail">{{ item.ext['邮箱'] }}</view>
+      <view>
+        <view class="name">{{ item.base.nick }}</view>
+        <view class="position">{{ item.ext['职位'] || '暂无职位' }}</view>
+      </view>
+      <view>
+        <view class="phone">{{ item.base.mobile }}</view>
+        <view class="mail">{{ item.ext['邮箱'] || '暂无邮箱' }}</view>
+      </view>
     </view>
     <view class="photo">
-      <image class="userinfo-avatar" src="{{item.base.avatarUrl}}" mode="widthFix" />
+      <image class="userinfo-avatar" src="{{item.base.avatarUrl}}" mode="aspectFill" />
     </view>
   </view>
 </view>

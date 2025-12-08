@@ -1,17 +1,73 @@
 @import "/wxParse/wxParse.wxss";
 
+/* 详情页面 - 优雅阅读体验 */
+page {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+.container {
+  padding-bottom: 80rpx;
+}
+
 .title {
   text-align: left;
-  width:700rpx;
+  width: 690rpx;
+  margin: 40rpx auto 0;
+  padding: 40rpx;
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1.6;
+  letter-spacing: 1rpx;
+  background: #ffffff;
+  border-radius: 24rpx 24rpx 0 0;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.04);
+  position: relative;
 }
+
+.title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rpx;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 24rpx 24rpx 0 0;
+}
+
 .datetime {
-  width:700rpx;
-  font-size: 12px;
-  margin-top: 10px;
-  color:#aaa;
+  width: 690rpx;
+  margin: 0 auto;
+  font-size: 26rpx;
+  color: #a0aec0;
+  padding: 24rpx 40rpx;
+  background: #ffffff;
+  border-top: 1rpx solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
 }
+
 .wxparse-content {
-  width: 700rpx;
+  width: 690rpx;
+  margin: 0 auto 40rpx;
+  padding: 40rpx;
+  background: #ffffff;
+  border-radius: 0 0 24rpx 24rpx;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.04);
   text-align: left;
-  font-size: 14px;
+  font-size: 30rpx;
+  line-height: 2;
+  color: #2d3748;
+}
+
+.wxparse-content image {
+  border-radius: 16rpx;
+  margin: 24rpx 0;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+}
+
+.wxparse-content p {
+  margin: 24rpx 0;
 }

@@ -1,3 +1,11 @@
+/* 全局样式 - 高端大气设计 */
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
 .container {
   height: 100%;
   display: flex;
@@ -6,28 +14,54 @@
   justify-content: space-between;
   box-sizing: border-box;
 } 
+
 .wxParse-img {
   display: block !important;
+  border-radius: 12rpx;
 }
+
 .space {
-  height:20rpx;
-  background-color: #F2f2f2;
+  height: 20rpx;
+  background-color: #f5f7fa;
 }
+
 .safeAreaOldPaddingBttom {
   padding-bottom: env(safe-area-inset-bottom);
 }
-.safeAreaNewPaddingBttom{
+
+.safeAreaNewPaddingBttom {
   padding-bottom: constant(safe-area-inset-bottom);  
 }
 
 .safeAreaOldMarginBttom {
   margin-bottom: env(safe-area-inset-bottom);
 }
-.safeAreaNewMarginBttom{
+
+.safeAreaNewMarginBttom {
   margin-bottom: constant(safe-area-inset-bottom);  
 }
-page {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
-    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
-    sans-serif;
+
+/* 通用卡片样式 */
+.card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 渐变按钮 */
+.gradient-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 48rpx;
+  color: #ffffff;
+  box-shadow: 0 8rpx 24rpx rgba(102, 126, 234, 0.3);
+}
+
+/* 文字渐变 */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

@@ -8,11 +8,9 @@ Page({
     this.getUserApiInfo()
   },
   onShow: function () {
-    AUTH.wxaCode().then(code => {
-      this.data.code = code
-    })
   },
-  getPhoneNumber: function(e) {
+  getPhoneNumber(e) {
+    console.log(e);
     if (!e.detail.errMsg || e.detail.errMsg != "getPhoneNumber:ok") {
       wx.showModal({
         title: '提示',
@@ -21,10 +19,8 @@ Page({
       })
       return;
     }
-    WXAPI.bindMobileWxapp(wx.getStorageSync('token'), this.data.code, e.detail.encryptedData, e.detail.iv).then(res => {
-      AUTH.wxaCode().then(code => {
-        this.data.code = code
-      })
+    // https://www.yuque.com/apifm/nu0f75/cql7e1
+    WXAPI.bindMobileWxappV2(wx.getStorageSync('token'), e.detail.code).then(res => {
       if (res.code === 10002) {
         AUTH.openLoginDialog()
         return
@@ -46,6 +42,7 @@ Page({
     })
   },
   async getUserApiInfo() {
+    // https://www.yuque.com/apifm/nu0f75/zgf8pu
     const res = await WXAPI.userDetail(wx.getStorageSync('token'))
     if (res.code == 0) {
       let _data = {}
@@ -61,13 +58,14 @@ Page({
       nick: this.data.nick
     }
     if (this.data.picsList && this.data.picsList.length > 0) {
+      // https://www.yuque.com/apifm/nu0f75/ygvqh6
       const res = await WXAPI.uploadFileV2(wx.getStorageSync('token'), this.data.picsList[0].url)
       if (res.code == 0) {
         postData.avatarUrl = res.data.url
       }
     }
     postData.extJsonStr = JSON.stringify(e.detail.value)
-    console.log(postData);
+    // https://www.yuque.com/apifm/nu0f75/ykr2zr
     const res = await WXAPI.modifyUserInfoV2(postData)
     if (res.code != 0) {
       wx.showToast({

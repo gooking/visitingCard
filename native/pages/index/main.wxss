@@ -1,38 +1,131 @@
 @import "/template/login/index.wxss";
 
+/* 首页 - 名片列表高端设计 */
+page {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+.container {
+  padding: 30rpx 0 60rpx;
+  min-height: 100vh;
+}
+
 .card {
   display: flex;
   flex-direction: row;
-  width: 680rpx;
-  height: 300rpx;
-  background-color: #ffffff;
-  border-radius:10px;
-  margin-top: 30rpx;
+  width: 690rpx;
+  margin: 30rpx auto;
+  background: #ffffff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1rpx solid rgba(102, 126, 234, 0.08);
 }
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rpx;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.card:active {
+  transform: translateY(-4rpx);
+  box-shadow: 0 12rpx 40rpx rgba(102, 126, 234, 0.15);
+}
+
 .card .profile {
-  width: 400rpx;
-  color:#555555;
-  padding-left: 20rpx;
+  flex: 1;
+  padding: 40rpx 32rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%);
 }
+
 .card .profile .name {
-  font-size: 30px;
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 12rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1rpx;
 }
+
 .card .profile .position {
-  font-size: 20px;
+  font-size: 28rpx;
+  color: #718096;
+  padding: 8rpx 20rpx;
+  background: rgba(102, 126, 234, 0.08);
+  border-radius: 24rpx;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 32rpx;
 }
+
 .card .profile .phone {
-  margin-top: 60rpx;
-  font-size: 15px;
+  font-size: 26rpx;
+  color: #4a5568;
+  margin-bottom: 12rpx;
+  display: flex;
+  align-items: center;
 }
+
+.card .profile .phone::before {
+  content: '📱';
+  margin-right: 12rpx;
+  font-size: 28rpx;
+}
+
 .card .profile .mail {
-  font-size: 15px;
+  font-size: 26rpx;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  word-break: break-all;
 }
+
+.card .profile .mail::before {
+  content: '✉️';
+  margin-right: 12rpx;
+  font-size: 28rpx;
+  flex-shrink: 0;
+}
+
 .card .photo {
   width: 280rpx;
-  height: 300rpx;
+  height: 360rpx;
   overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
 }
+
+.card .photo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
 .card .photo .userinfo-avatar {
-  width: 280rpx;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:active .photo .userinfo-avatar {
+  transform: scale(1.1);
 }

@@ -1,9 +1,9 @@
 <import src="../../wxParse/wxParse.wxml" />
 
-<div class="container" style="background-color: #fff">
-  <div class="title">{{newsObject.title}}</div>
-  <div class="datetime">{{newsObject.dateAdd}}</div>
-  <div class="wxparse-content">
+<view class="container" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); min-height: 100vh; padding: 20rpx 0 60rpx;">
+  <view class="title">{{newsObject.title}}</view>
+  <view class="datetime">📅 {{newsObject.dateAdd}}</view>
+  <view class="wxparse-content">
     <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
-  </div>
-</div>
+  </view>
+</view>

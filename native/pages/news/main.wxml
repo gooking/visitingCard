@@ -1,18 +1,17 @@
-<div class="container" style="background-color: #fff;">
-  <div wx:if="{{!newsList}}" class="noData">
+<view class="container222" style="background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); min-height: 100vh; padding: 20rpx 0;">
+  <view wx:if="{{!newsList}}" class="noData">
     <image class="logo" src="/images/mp/nodata-message.png" mode="widthFix" />
-    <div>暂无数据 ~ </div>
-  </div>
-  <div wx:for="{{newsList}}" wx:for-index='id' class="newsList" bindtap="goDetail" data-id="{{item.id}}">
-    <div class="title">{{item.title}}</div>
-    <div class="descriptDiv">
-      <div class="word" :style="item.pic ? 'width: 75%;' : ''">
-        <div class="descript">{{item.descript}}</div>
-        <div style="clear:both;" />
-      </div>
-      <div wx:if="{{item.pic}}" class="cover">
-        <image class="cover-img" src="{{item.pic}}" mode="widthFix" />
-      </div>
-    </div>
-  </div>
-</div>
+    <view style="margin-top: 40rpx; font-weight: 500;">暂无动态数据</view>
+  </view>
+  <view wx:for="{{newsList}}" wx:for-index='id' wx:key="id" class="newsList" bindtap="goDetail" data-id="{{item.id}}">
+    <view class="title">{{item.title}}</view>
+    <view class="descriptDiv">
+      <view class="word" style="{{item.pic ? 'flex: 1;' : 'width: 100%;'}}">
+        <view class="descript">{{item.descript}}</view>
+      </view>
+      <view wx:if="{{item.pic}}" class="cover">
+        <image class="cover-img" src="{{item.pic}}" mode="aspectFill" />
+      </view>
+    </view>
+  </view>
+</view>

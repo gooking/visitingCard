@@ -60,6 +60,7 @@ Page({
 
   },
   fetchNews() {
+    // https://www.yuque.com/apifm/nu0f75/dv76qr
     WXAPI.cmsArticlesV3({
       categoryId: wx.getStorageSync('news_category_dt').id
     }).then(res => {

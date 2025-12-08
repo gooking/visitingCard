@@ -3,7 +3,9 @@ const CONFIG = require('config.js')
 const AUTH = require('utils/auth')
 App({
   onLaunch: function() {
+    // https://www.yuque.com/apifm/nu0f75/es1xel
     WXAPI.init(CONFIG.subDomain)
+    // https://www.yuque.com/apifm/nu0f75/by94a0
     WXAPI.setMerchantId(CONFIG.merchantId)
     const that = this;
     // 检测新版本
@@ -53,7 +55,7 @@ App({
         wx.hideToast()
       }
     });
-    // 获取所有的文章分类
+    // 获取所有的文章分类 https://www.yuque.com/apifm/nu0f75/slu10w
     WXAPI.cmsCategories().then(res => {
       if (res.code === 0) {
         res.data.forEach(category => {

@@ -47,56 +47,7 @@
   "simulatorPluginLibVersion": {},
   "condition": {
     "miniprogram": {
-      "list": [
-        {
-          "name": "home",
-          "pathName": "pages/index/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "商品详情页面",
-          "pathName": "pages/goods-details/index",
-          "query": "id=134&inviter_id=456",
-          "scene": 1011
-        },
-        {
-          "name": "商品详情页面",
-          "pathName": "pages/goods-details/index",
-          "query": "id= 6761",
-          "scene": null
-        },
-        {
-          "name": "砍价详情页面",
-          "pathName": "pages/goods-details/index",
-          "query": "id=6765",
-          "scene": null
-        },
-        {
-          "name": "砍价详情页面",
-          "pathName": "pages/goods-details/index",
-          "query": "id=6765&kjJoinUid=701677",
-          "scene": null
-        },
-        {
-          "name": "拼团",
-          "pathName": "pages/goods-details/index",
-          "query": "id=6761",
-          "scene": null
-        },
-        {
-          "name": "生成海报",
-          "pathName": "pages/goods-details/poster",
-          "query": "goodsid=6761",
-          "scene": null
-        },
-        {
-          "name": "分销中心",
-          "pathName": "pages/fx/apply-status",
-          "query": "",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   },
   "packOptions": {

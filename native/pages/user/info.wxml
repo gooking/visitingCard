@@ -4,28 +4,28 @@
     center
     readonly
     clearable
-    label="手机号码"
+    label="📱 手机号码"
     use-button-slot
   >
     <van-button slot="button" type="primary" size="small" open-type="getPhoneNumber" bind:getphonenumber="getPhoneNumber">重新绑定</van-button>
   </van-field>
   <van-field
-    label="姓名"
+    label="👤 姓名"
     model:value="{{ nick }}"
     placeholder="请输入姓名"
     clearable
   />
   <van-field
     wx:for="{{apiUserInfoMap.ext}}" wx:for-index='k' wx:key="index"
-    label="{{ k }}"
+    label="{{k}}"
     name="{{ k}}"
     value="{{ item }}"
-    placeholder="请输入职位"
+    placeholder="请输入{{k}}"
     clearable
   />
   <van-uploader
     accept="image"
-    upload-text="上传头像"
+    upload-text="📷 上传头像"
     image-fit="aspectFill"
     file-list="{{ picsList }}"
     bind:after-read="afterPicRead"
@@ -33,6 +33,6 @@
     bind:delete="afterPicDel"
   />
   <view class="btn">
-    <van-button type="primary" block form-type="submit">保存</van-button>
+    <van-button type="primary" block form-type="submit">💾 保存资料</van-button>
   </view>
 </form>

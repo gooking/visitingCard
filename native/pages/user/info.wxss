@@ -1,3 +1,52 @@
+/* 用户信息页面 - 现代表单设计 */
+page {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+
+form {
+  padding: 0 30rpx;
+}
+
+.van-cell {
+  margin-bottom: 24rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.04);
+}
+
+.van-field {
+  background: #ffffff;
+  border-radius: 16rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.04);
+}
+
+.van-uploader {
+  padding: 32rpx;
+  background: #ffffff;
+  border-radius: 16rpx;
+  margin: 24rpx 0;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.04);
+}
+
 .btn {
-  margin: 32rpx;
+  padding: 32rpx;
+}
+
+.btn button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 48rpx;
+  height: 96rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  box-shadow: 0 8rpx 24rpx rgba(102, 126, 234, 0.3);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4rpx 16rpx rgba(102, 126, 234, 0.2);
 }

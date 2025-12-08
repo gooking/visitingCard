@@ -80,16 +80,19 @@ Page({
     // 判断自己是不是名片
     const token = wx.getStorageSync('token')
     const cardList = []
+    // https://www.yuque.com/apifm/nu0f75/zgf8pu
     let res = await WXAPI.userDetail(token)
     if (res.code == 0 && res.data.userLevel && res.data.userLevel.name === 'aicard') {
       cardList.push(res.data)
     }
+    // https://www.yuque.com/apifm/nu0f75/ks8v84
     res = await WXAPI.friendList({
       token: token
     })
     if (res.code == 0) {
       for (let i = 0; i < res.data.result.length; i++){
         const element = res.data.result[i]
+        // https://www.yuque.com/apifm/nu0f75/ym7226
         const _res = await WXAPI.friendUserDetail(token, element.uids)
         if (_res.code === 0) {
           cardList.push(_res.data)

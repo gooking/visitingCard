@@ -29,6 +29,7 @@ function wxpay(type, money, orderId, redirectUrl, data) {
   if (postData.nextAction) {
     postData.nextAction = JSON.stringify(postData.nextAction);  
   }
+  // https://www.yuque.com/apifm/nu0f75/kffu74
   WXAPI.wxpay(postData).then(function (res) {
     if (res.code == 0) {
       // 发起支付

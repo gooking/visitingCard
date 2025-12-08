@@ -1,15 +1,15 @@
 <view class="container">
   <view class="max-width">
-    <image class="userinfo-avatar" src="{{cardUserInfo.base.avatarUrl}}" mode="widthFix" />
+    <image class="userinfo-avatar" src="{{cardUserInfo.base.avatarUrl}}" mode="aspectFill" />
   </view>
   <view class="profile-box">
     <view class="profile">
       <view class="name">{{ cardUserInfo.base.nick }}</view>
-      <view class="position">{{ cardUserInfo.ext ? cardUserInfo.ext['职位'] : '-' }}</view>
+      <view class="position">{{ cardUserInfo.ext ? cardUserInfo.ext['职位'] : '暂无职位' }}</view>
     </view>
-    <van-cell title="手机" value="{{cardUserInfo.base.mobile}}" is-link bind:click="callPhone" />
+    <van-cell title="📱 手机" value="{{cardUserInfo.base.mobile}}" is-link bind:click="callPhone" />
     <van-cell wx:for="{{cardUserInfo.ext}}" wx:for-index='k' wx:key="index" title="{{k}}" value="{{item}}" is-link data-v="{{item}}" bind:click="copyData" />
-    <van-cell wx:if="{{ cardUid == uid}}" title="资料管理" value="编辑" is-link url="/pages/user/info" />
+    <van-cell wx:if="{{ cardUid == uid}}" title="⚙️ 资料管理" value="编辑" is-link url="/pages/user/info" />
   </view>
   <view class="action-buttons">
     <view class="button" bindtap="createHaibao">
@@ -21,9 +21,8 @@
       <view class="txt">存入通讯录</view>
     </view>
     <view class="button">
-      <button open-type="share" plain="true" style="border:none;">
-        <image class="img" style="margin-left:0;" src="/images/mp/share.png" />
-      </button>
+      <button open-type="share"></button>
+      <image class="img" src="/images/mp/share.png" />
       <view class="txt">分享好友</view>
     </view>
   </view>

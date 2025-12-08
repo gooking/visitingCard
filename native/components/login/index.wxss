@@ -1,38 +1,86 @@
+/* 登录组件 - 精致弹窗设计 */
 .btn-add-box-popup {
-  width: 600rpx;
+  width: 640rpx;
+  background: #ffffff;
+  border-radius: 32rpx;
+  overflow: hidden;
 }
+
 .t-box {
-  margin-top: 32rpx;
+  margin-top: 48rpx;
   height: 100rpx;
   position: relative;
+  border-bottom: 1rpx solid rgba(102, 126, 234, 0.1);
 }
+
 .t {
   line-height: 100rpx;
-  font-size: 38rpx;
+  font-size: 40rpx;
+  font-weight: 700;
   text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
 .jump {
   position: absolute;
   top: 0;
   right: 48rpx;
   line-height: 100rpx;
-  font-size: 32rpx;
-  color: #bbb;
+  font-size: 28rpx;
+  color: #a0aec0;
+  transition: all 0.3s ease;
 }
+
+.jump:active {
+  color: #667eea;
+}
+
+.avatar-box {
+  text-align: center;
+  padding: 48rpx 0;
+}
+
 .avatar {
-  margin-top: 32rpx;
+  margin: 0 auto;
   width: 240rpx;
   height: 240rpx;
   padding: 0;
   border-radius: 50%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 4rpx solid rgba(102, 126, 234, 0.2);
+  overflow: hidden;
+  box-shadow: 0 8rpx 32rpx rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
 }
+
+.avatar:active {
+  transform: scale(0.95);
+}
+
 .avatar-img {
   width: 240rpx;
   height: 240rpx;
+  border-radius: 50%;
+  object-fit: cover;
 }
+
 .nick-box {
-  padding: 32rpx 0;
+  padding: 32rpx 48rpx;
 }
+
 .btn-group {
-  padding: 32rpx;
+  padding: 32rpx 48rpx 48rpx;
+}
+
+.btn-group button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 48rpx;
+  height: 96rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  box-shadow: 0 8rpx 24rpx rgba(102, 126, 234, 0.3);
+  border: none;
 }

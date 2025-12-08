@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container" style="min-height: 100vh; padding: 40rpx 0;">
   <canvas class="canvas" style="{{canvasstyle}}" canvas-id="firstCanvas"></canvas>
-  <button class="button" type="primary" bindtap="saveToMobile">保存到手机相册</button>
+  <button class="button" type="primary" bindtap="saveToMobile">💾 保存到手机相册</button>
 </view>

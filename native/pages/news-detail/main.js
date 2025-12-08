@@ -62,6 +62,7 @@ Page({
 
   },
   fetchNewsContent() {
+    // https://www.yuque.com/apifm/nu0f75/dv76qr
     WXAPI.cmsArticleDetailV3({ id: this.data.newsId }).then(res => {
       if (res.code === 0) {
         this.setData({
